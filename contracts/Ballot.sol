@@ -43,10 +43,17 @@ contract Ballot {
     State public state;
 
     //creates a new ballot contract
-    constructor(string memory _ballotOfficialName, proposal memory _proposal) {
+    constructor(
+        string memory _ballotOfficialName,
+        string memory _proposalName,
+        string memory _proposalContent
+    ) {
         ballotOfficialAddress = msg.sender;
         ballotOfficialName = _ballotOfficialName;
-        ballotProposal = _proposal;
+        ballotProposal = proposal({
+            proposalName: _proposalName,
+            proposalContent: _proposalContent
+        });
 
         state = State.Created;
     }

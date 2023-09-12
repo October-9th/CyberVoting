@@ -6,10 +6,11 @@ module.exports = {
     ganache: {
       url: "HTTP://127.0.0.1:7545",
       accounts: [
-        `dc0680cb98e798056901556d04e9b10626ac40248f3f116b4bf22e13ad3c8826`,
+        `3211b2fb0437ceed80149b9aebcb6f9a831e3056ad061e47d70c94f9e9759905`,
       ],
     },
   },
+
   solidity: {
     version: "0.8.19",
     settings: {
@@ -18,5 +19,9 @@ module.exports = {
         runs: 200,
       },
     },
+  },
+
+  mocha: {
+    timeout: 80000,
   },
 };
